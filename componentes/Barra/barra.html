@@ -1,0 +1,54 @@
+<section class="barra">
+    <p class="descripcion-barra">
+        Todos nuestros artículos son personalizables para incluir el logotipo de tu empresa, tu eslogan, los
+        nombres
+        de tus empleados, clientes, socios u otra personalización.
+    </p>
+</section>
+
+<style>
+    .barra {
+        display: flex;
+        height: 102px;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        background-color: #727275;
+        margin-top: 100px;
+    }
+
+    .descripcion-barra {
+        width: 1062px;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        color: #ffffff;
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: 18px;
+    }
+
+    @media (max-width: 768px) {
+        .barra {
+            height: auto;
+            padding: 20px;
+        }
+
+        .descripcion-barra {
+            width: 100%;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .barra {
+            padding: 15px;
+        }
+
+        .descripcion-barra {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+</style>

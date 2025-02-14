@@ -1,0 +1,165 @@
+<section class="seccion">
+    <h2 class="titulo-section">NUESTROS PRODUCTOS</h2>
+    <div class="grid-2">
+        <div class="producto">
+            <img src="../../assets/img/tecnologico.webp" alt="Artículos Importados">
+            <h3 class="titulo-producto">Artículos Importados</h3>
+            <p class="precio">$599</p>
+        </div>
+        <div class="producto">
+            <img src="../../assets/img/regalosCorporativos.webp" alt="Artículos Corporativos">
+            <h3 class="titulo-producto">Artículos Corporativos</h3>
+            <p class="precio">$1,449</p>
+        </div>
+        <div class="producto">
+            <img src="../../assets/img/ecologico.webp" alt="Artículos Ecológicos">
+            <h3 class="titulo-producto">Artículos Ecológicos</h3>
+            <p class="precio">$739</p>
+        </div>
+        <div class="producto">
+            <img src="../../assets/img/papeleria.webp" alt="Artículos de Imprenta">
+            <h3 class="titulo-producto">Artículos de Imprenta</h3>
+            <p class="precio">$186</p>
+        </div>
+        <div class="producto">
+            <img src="../../assets/img/textileria.webp" alt="Artículos Textil">
+            <h3 class="titulo-producto">Artículos Textil</h3>
+            <p class="precio">$98</p>
+        </div>
+        <div class="producto">
+            <img src="../../assets/img/tazas-publicitarias.webp" alt="Tazas Publicitarias">
+            <h3 class="titulo-producto">Tazas Publicitarias</h3>
+            <p class="precio">$739</p>
+        </div>
+        <div class="producto">
+            <img src="../../assets/img/textileria.webp" alt="Artículos Textil">
+            <h3 class="titulo-producto">Artículos Textil</h3>
+            <p class="precio">$98</p>
+        </div>
+        <div class="producto">
+            <img src="../../assets/img/tazas-publicitarias.webp" alt="Tazas Publicitarias">
+            <h3 class="titulo-producto">Tazas Publicitarias</h3>
+            <p class="precio">$739</p>
+        </div>
+    </div>
+    <button class="ver-mas">Ver más artículos <span class="material-symbols-outlined">
+            add
+        </span></button>
+</section>
+
+<style>
+    .seccion {
+        padding: 100px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-2 {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 0px 10%;
+        width: 100%;
+    }
+
+    .producto {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 10px;
+        background: #fff;
+        width: 100%;
+        max-width: 330px;
+        transition: transform 0.3s ease;
+        margin: 0 auto;
+    }
+
+    .producto:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .producto img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .titulo-producto {
+        font-family: "Inter", Helvetica;
+        font-weight: 400;
+        color: rgba(37, 44, 50, 1);
+        font-size: 14px;
+        letter-spacing: -0.084px;
+        line-height: 24px;
+        white-space: nowrap;
+        font-style: normal;
+    }
+
+    .precio {
+        font-family: "Inter", Helvetica;
+        font-weight: 600;
+        color: rgba(37, 44, 50, 1);
+        font-size: 18px;
+        letter-spacing: -0.252px;
+        line-height: 24px;
+        white-space: nowrap;
+        font-style: normal;
+    }
+
+    .ver-mas {
+        background: #ff7f27;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 50px;
+        transition: background 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .ver-mas:hover {
+        background: #e56b1f;
+    }
+
+    @media (max-width: 768px) {
+        .titulo-section {
+            font-size: 28px;
+            line-height: 32px;
+        }
+
+        .producto {
+            max-width: 100%;
+        }
+
+        .grid-2 {
+            padding: 0px 5%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .titulo-section {
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        .producto {
+            padding: 15px;
+        }
+
+        .ver-mas {
+            font-size: 14px;
+            padding: 10px 16px;
+        }
+    }
+</style>

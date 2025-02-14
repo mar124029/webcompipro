@@ -1,0 +1,173 @@
+<header class="header">
+    <img class="logo" src="../../assets/img/logo-compipro.webp" />
+
+    <div class="menu-toggle" id="menuToggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+
+    <ul class="navbar" id="navbar">
+        <li class="link"><a href="#Nosotros">Nosotros</a></li>
+        <li class="link"><a href="#Productos">Productos</a></li>
+        <li class="link"><a href="#Catálogos">Catálogos</a></li>
+        <li class="link"><a href="#Contacto">Contacto</a></li>
+    </ul>
+
+
+    <div class="infocontact">
+        <div class="rowcontact">
+            <span class="material-symbols-outlined"> call </span>
+            <div class="element">(51) 932 230 880</div>
+        </div>
+        <div class="rowcontact">
+            <span class="material-symbols-outlined"> mail </span>
+            <a href="mailto:no-reply@domain.com" target="_blank" rel="noopener noreferrer">
+                <div class="text-wrapper-20">ventas@compipro.net</div>
+            </a>
+        </div>
+    </div>
+
+</header>
+
+
+
+<style>
+    /* Estilos generales */
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 122px;
+        background: white;
+        transition: all 0.3s ease-in-out;
+        z-index: 1000;
+        border-bottom: 1px solid transparent;
+    }
+
+    .header.scrolled {
+        background: rgba(237, 142, 37, 0.5);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 140, 0, 0.4);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px 40px;
+    }
+
+    .logo {
+        width: 120px;
+        transition: width 0.3s ease;
+    }
+
+    .header.scrolled .logo {
+        width: 100px;
+    }
+
+    /* Estilos de la barra de navegación */
+    .navbar {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        list-style: none;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+    }
+
+    .navbar a:hover {
+        color: #1000ff;
+    }
+
+    /* Botón hamburguesa */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    .menu-toggle div {
+        width: 30px;
+        height: 3px;
+        background: black;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    /* Sección de contacto */
+    .infocontact {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .rowcontact {
+        display: flex;
+        align-items: center;
+        gap: 6.5px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+        .header {
+            padding: 15px 30px;
+        }
+
+        .logo {
+            width: 110px;
+        }
+
+        .navbar {
+            gap: 20px;
+        }
+
+        .navbar a {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        .header {
+            padding: 10px 20px;
+        }
+
+        .infocontact {
+            display: none;
+        }
+
+        .logo {
+            width: 100px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            background: white;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding-top: 100px;
+            transition: right 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar.active {
+            right: 0;
+        }
+
+        .menu-toggle {
+            display: flex;
+        }
+    }
+</style>

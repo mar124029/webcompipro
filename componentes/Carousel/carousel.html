@@ -1,0 +1,172 @@
+<section class="seccion">
+    <h2 class="titulo-section">PRODUCTOS DESARROLLADOS</h2>
+    <div class="scene">
+        <div class="carousel">
+            <div class="carousel__cell"><img src="../../assets/img/ALTOMAYO-web.webp" alt="Image 1"></div>
+            <div class="carousel__cell"><img src="../../assets/img/Muestra-virtual-SEGUMAX.webp" alt="Image 2"></div>
+            <div class="carousel__cell"><img src="../../assets/img/Muestra-virtual-TASA-KIT-1.webp" alt="Image 3"></div>
+            <div class="carousel__cell"><img src="../../assets/img/lapiceros-ecologicos-web.webp" alt="Image 4"></div>
+            <div class="carousel__cell"><img
+                    src="../../assets//img/goldcar-qli192qs3t84kjrsx6gki4h4l6o9vrzzy922v0err4.jpg.webp" alt="Image 5">
+            </div>
+            <div class="carousel__cell"><img
+                    src="../../assets//img/Muestra-virtual-AO-1-1-qli193oman9ew5qfrov72m8l6kjn3h3qadpkcaddkw.jpg.webp"
+                    alt="Image 6"></div>
+            <div class="carousel__cell"><img
+                    src="../../assets//img/kit-coporativo-web2-qli18x3qyt0emvzzu40t35wd0vg2lldlxh55zcn4sg.jpg.webp"
+                    alt="Image 7"></div>
+            <div class="carousel__cell"><img
+                    src="../../assets//img/juego-de-mesa-tasa-web2-qli18x3qyt0emvzzu40t35wd0vg2lldlxh55zcn4sg.png.webp"
+                    alt="Image 8"></div>
+            <div class="carousel__cell"><img
+                    src="../../assets//img/kit-tasa-traine-web2-1-qli18w5wryz4ba1czlm6io4wfhkpdw9vlchoi2oiyo.jpg.webp"
+                    alt="Image 9"></div>
+        </div>
+    </div>
+    <p class="buttons">
+        <button class="previous-button">Previous</button>
+        <button class="next-button">Next</button>
+    </p>
+</section>
+
+
+<style>
+    .scene {
+
+        margin: 40px 0;
+        position: relative;
+        width: 400px;
+        /* Aumentado */
+        height: 300px;
+        /* Aumentado */
+        margin: 40px auto;
+        perspective: 1200px;
+        /* Aumentado para mejorar el efecto 3D */
+    }
+
+    .carousel {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform: translateZ(-500px);
+        /* Ajustado para mayor separación */
+        transform-style: preserve-3d;
+        transition: transform 1s;
+    }
+
+    .carousel__cell {
+        position: absolute;
+        width: 360px;
+        /* Aumentado */
+        height: 360px;
+        /* Aumentado */
+        left: 20px;
+        top: 20px;
+        border: 2px solid black;
+        text-align: center;
+    }
+
+    .buttons {
+        text-align: center;
+        margin-top: 170px;
+    }
+
+    .previous-button,
+    .next-button {
+        background-color: #ff7e26;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 12px;
+        transition: background-color 0.3s ease;
+    }
+
+    .previous-button:hover,
+    .next-button:hover {
+        background-color: #0056b3;
+    }
+
+    .carousel__cell:nth-child(9n+1) {
+        background: hsla(0, 100%, 50%, 0.8);
+    }
+
+    .carousel__cell:nth-child(9n+2) {
+        background: hsla(40, 100%, 50%, 0.8);
+    }
+
+    .carousel__cell:nth-child(9n+3) {
+        background: hsla(80, 100%, 50%, 0.8);
+    }
+
+    .carousel__cell:nth-child(9n+4) {
+        background: hsla(120, 100%, 50%, 0.8);
+    }
+
+    .carousel__cell:nth-child(9n+5) {
+        background: hsla(160, 100%, 50%, 0.8);
+    }
+
+    .carousel__cell:nth-child(9n+6) {
+        background: hsla(200, 100%, 50%, 0.8);
+    }
+
+    .carousel__cell:nth-child(9n+7) {
+        background: hsla(240, 100%, 50%, 0.8);
+    }
+
+    .carousel__cell:nth-child(9n+8) {
+        background: hsla(280, 100%, 50%, 0.8);
+    }
+
+    .carousel__cell:nth-child(9n+0) {
+        background: hsla(320, 100%, 50%, 0.8);
+    }
+
+    .carousel__cell:nth-child(1) {
+        transform: rotateY(0deg) translateZ(500px);
+    }
+
+    .carousel__cell:nth-child(2) {
+        transform: rotateY(40deg) translateZ(500px);
+    }
+
+    .carousel__cell:nth-child(3) {
+        transform: rotateY(80deg) translateZ(500px);
+    }
+
+    .carousel__cell:nth-child(4) {
+        transform: rotateY(120deg) translateZ(500px);
+    }
+
+    .carousel__cell:nth-child(5) {
+        transform: rotateY(160deg) translateZ(500px);
+    }
+
+    .carousel__cell:nth-child(6) {
+        transform: rotateY(200deg) translateZ(500px);
+    }
+
+    .carousel__cell:nth-child(7) {
+        transform: rotateY(240deg) translateZ(500px);
+    }
+
+    .carousel__cell:nth-child(8) {
+        transform: rotateY(280deg) translateZ(500px);
+    }
+
+    .carousel__cell:nth-child(9) {
+        transform: rotateY(320deg) translateZ(500px);
+    }
+
+    .carousel__cell img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+</style>

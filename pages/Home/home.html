@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compipro</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/styleguide.css" />
+    <link rel="stylesheet" href="../../assets/css/globals.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="hero"></div>
+    <div id="productos"></div>
+    <div id="potenciamos"></div>
+    <div id="clientes"></div>
+    <div id="carousel"></div>
+    <div id="barra"></div>
+    <div id="iconos"></div>
+    <div id="footer"></div>
+    <script>
+
+        async function loadComponents() {
+            const headerHTML = await fetch('../../componentes/Header/header.html').then(res => res.text());
+            const heroHTML = await fetch('../../componentes/Hero/hero.html').then(res => res.text());
+            const productosHTML = await fetch('../../componentes/Productos/productos.html').then(res => res.text());
+            const potenciamosHTML = await fetch('../../componentes/Potenciamos/potenciamos.html').then(res => res.text());
+            const clientesHTML = await fetch('../../componentes/Clientes/clientes.html').then(res => res.text());
+            const carouselHTML = await fetch('../../componentes/Carousel/carousel.html').then(res => res.text());
+            const barraHTML = await fetch('../../componentes/Barra/barra.html').then(res => res.text());
+            const iconosHTML = await fetch('../../componentes/Iconos/iconos.html').then(res => res.text());
+            const footerHTML = await fetch('../../componentes/Footer/footer.html').then(res => res.text());
+
+            document.getElementById('header').innerHTML = headerHTML;
+            document.getElementById('hero').innerHTML = heroHTML;
+            document.getElementById('productos').innerHTML = productosHTML;
+            document.getElementById('potenciamos').innerHTML = potenciamosHTML;
+            document.getElementById('clientes').innerHTML = clientesHTML;
+            document.getElementById('carousel').innerHTML = carouselHTML;
+            document.getElementById('barra').innerHTML = barraHTML;
+            document.getElementById('iconos').innerHTML = iconosHTML;
+            document.getElementById('footer').innerHTML = footerHTML;
+
+            const carousel = document.querySelector(".carousel");
+            let angle = 0;
+            const cells = carousel.children.length;
+            const cellAngle = 360 / cells;
+
+            function rotateCarousel() {
+                angle -= cellAngle;
+                carousel.style.transform = `translateZ(-500px) rotateY(${angle}deg)`;
+            }
+
+            setInterval(rotateCarousel, 2000);
+
+            // Asegurar que el script se cargue solo después de insertar el HTML
+            const headerScript = document.createElement('script');
+            headerScript.src = '../../componentes/Header/header.js';
+            document.body.appendChild(headerScript);
+
+            // Cargar dinámicamente el script después de que el HTML del carrusel esté en el DOM
+            const carouselScript = document.createElement('script');
+            carouselScript.src = '../../componentes/Carousel/carousel.js';
+            carouselScript.onload = () => console.log('carousel.js cargado');
+            document.body.appendChild(carouselScript);
+        }
+
+        loadComponents();
+    </script>
+    <script src="../../componentes/Hero/hero.js"></script>
+
+</body>
+
+</html>

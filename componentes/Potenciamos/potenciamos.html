@@ -1,0 +1,205 @@
+<section class="seccion">
+    <div class="titulo-section">POTENCIAMOS TU CRECIMIENTO</div>
+    <div class="grid">
+        <div class="card">
+            <video class="unsplash" src="../../assets/video/vprom01.mp4" autoplay loop muted></video>
+            <div class="card-body">
+                <div class="card-titulo">Deja tu huella</div>
+                <p class="card-descripcion">
+                    Las prendas de vestir reflejan mucho la personalidad de las personas, ten la oportunidad
+                    de dejar tu propia huella en el mercado. Tus prendas, tu estilo.
+                </p>
+            </div>
+            <div class="card-footer">
+                <button class="leer-mas">LEER MÁS</button>
+            </div>
+        </div>
+        <div class="card">
+            <video class="unsplash" src="../../assets//video/vprom02.m4v" autoplay loop muted></video>
+            <div class="card-body">
+                <div class="card-titulo">Compromiso Contigo</div>
+                <p class="card-descripcion">
+                    En COMPIPRO sabemos que las marcas de nuestros clientes tienen un valor muy especial y
+                    es por ello que los ayudamos a seguir creciendo cada día.
+                </p>
+            </div>
+            <div class="card-footer">
+                <button class="leer-mas">LEER MÁS</button>
+            </div>
+        </div>
+        <div class="card">
+            <video class="unsplash" src="../../assets//video/vprom03.m4v" autoplay loop muted></video>
+            <div class="card-body">
+                <div class="card-titulo">Hábitos Ahorradores</div>
+                <p class="card-descripcion">
+                    El ahorro es un gran recurso para poder cubrir gastos de imprevistos o realizar una
+                    futura inversión de la mejor manera.
+                </p>
+            </div>
+            <div class="card-footer">
+                <button class="leer-mas">LEER MÁS</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .grid {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 0px 10%;
+        /* Usa porcentaje en lugar de un valor fijo */
+        width: 100%;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        /* height: 541.52px; */
+        align-items: center;
+        justify-content: space-between;
+        background-color: #ffffff;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0px 6px 6px 6px #00000040;
+    }
+
+    .unsplash {
+        width: 100%;
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 25px;
+        width: 100%;
+    }
+
+    .card-titulo {
+        font-family: "Roboto-Black", Helvetica;
+        font-weight: 900;
+        color: #000;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .card-descripcion {
+        font-family: "Roboto", Helvetica;
+        font-weight: 400;
+        color: #000;
+        font-size: 17px;
+        text-align: center;
+        line-height: 23px;
+    }
+
+    .card-footer {
+        display: flex;
+        justify-content: center;
+        padding: 25px;
+        width: 100%;
+    }
+
+    .leer-mas {
+        height: 48px;
+        padding: 10px 20px;
+        background-color: #fe1a59;
+        color: #ffffff;
+        font-family: "Roboto-Bold", Helvetica;
+        font-weight: 700;
+        font-size: 16px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .leer-mas:hover {
+        background-color: #d91549;
+    }
+
+    .titulo-section {
+        font-family: "Roboto-Black", Helvetica;
+        font-weight: 900;
+        color: #000;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 40px;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 30px;
+        box-sizing: border-box;
+        /* Asegura que el padding se incluya en el ancho total */
+    }
+
+    @media (max-width: 768px) {
+        .grid {
+            grid-template-columns: 1fr;
+            padding: 0 5%;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .card-titulo {
+            font-size: 20px;
+        }
+
+        .card-descripcion {
+            font-size: 15px;
+        }
+
+        .leer-mas {
+            font-size: 14px;
+            padding: 8px 16px;
+        }
+
+        .titulo-section {
+            font-size: 26px;
+            margin-bottom: 30px;
+            padding: 0 20px;
+            /* Ajusta el padding para pantallas más pequeñas */
+            width: 90%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .card-titulo {
+            font-size: 18px;
+        }
+
+        .card-descripcion {
+            font-size: 14px;
+        }
+
+        .leer-mas {
+            font-size: 12px;
+            padding: 6px 12px;
+        }
+
+        .titulo-section {
+            font-size: 18px;
+            margin-bottom: 20px;
+            padding: 0 15px;
+            /* Ajusta el padding para pantallas más pequeñas */
+            width: 95%;
+        }
+    }
+
+    @media (max-width: 320px) {
+        .titulo-section {
+            font-size: 16px;
+            margin-bottom: 15px;
+            padding: 0 10px;
+            /* Ajusta el padding para pantallas más pequeñas */
+            width: 100%;
+        }
+    }
+</style>
